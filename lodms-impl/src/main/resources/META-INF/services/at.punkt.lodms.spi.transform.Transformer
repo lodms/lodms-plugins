@@ -1,0 +1,4 @@
+at.punkt.lodms.impl.transform.sparql.update.SPARQLUpdateTransformer
+at.punkt.lodms.impl.transform.delete.ResourceDeleteTransformer
+at.punkt.lodms.impl.transform.replace.regex.RegexTransformer
+at.punkt.lodms.impl.transform.replace.html.HtmlTransformer
