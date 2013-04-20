@@ -19,7 +19,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
-import org.apache.log4j.Logger;
 import org.openrdf.rio.RDFFormat;
 import org.openrdf.rio.RDFHandler;
 import org.openrdf.rio.RDFParser;
@@ -27,7 +26,7 @@ import org.openrdf.rio.Rio;
 
 /**
  *
- * @author Alex Kreiser
+ * @author Alex Kreiser (akreiser@gmail.com)
  */
 public class SPARQLExtractor extends ConfigurableBase<SPARQLConfig> implements Extractor, UIComponent, ConfigDialogProvider<SPARQLConfig> {
 
@@ -81,7 +80,6 @@ public class SPARQLExtractor extends ConfigurableBase<SPARQLConfig> implements E
     public void extract(RDFHandler handler, ExtractContext context) throws ExtractException {
         try {
             URL call = new URL(endpoint.toString() + "?query=" + URLEncoder.encode(query, encoding) + "&format=" + URLEncoder.encode(format.getDefaultMIMEType(), encoding));
-            Logger.getRootLogger().info(call);
             HttpURLConnection connection = (HttpURLConnection) call.openConnection();
             connection.addRequestProperty("Accept", format.getDefaultMIMEType());
             RDFParser parser = Rio.createParser(format);
@@ -110,8 +108,9 @@ public class SPARQLExtractor extends ConfigurableBase<SPARQLConfig> implements E
     @Override
     public String asString() {
         String shortQuery = query;
-        if (shortQuery.length() > 25)
+        if (shortQuery.length() > 25) {
             shortQuery = shortQuery.substring(0, 25);
+        }
         return getName() + " [" + endpoint + "] [" + shortQuery + "...]";
     }
 

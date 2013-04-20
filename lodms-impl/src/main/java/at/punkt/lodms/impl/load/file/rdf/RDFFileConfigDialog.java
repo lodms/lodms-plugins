@@ -22,7 +22,7 @@ import org.openrdf.rio.RDFFormat;
 
 /**
  *
- * @author Alex Kreiser
+ * @author Alex Kreiser (akreiser@gmail.com)
  */
 public class RDFFileConfigDialog extends VerticalLayout implements ConfigDialog {
 

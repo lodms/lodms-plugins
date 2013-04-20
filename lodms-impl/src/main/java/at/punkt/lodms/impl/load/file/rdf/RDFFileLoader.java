@@ -29,7 +29,7 @@ import org.openrdf.rio.helpers.RDFHandlerWrapper;
 
 /**
  *
- * @author Alex Kreiser
+ * @author Alex Kreiser (akreiser@gmail.com)
  */
 public class RDFFileLoader extends RDFHandlerLoader<RDFFileConfig> implements UIComponent, ConfigDialogProvider<RDFFileConfig> {
 

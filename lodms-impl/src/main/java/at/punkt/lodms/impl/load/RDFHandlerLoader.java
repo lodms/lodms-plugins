@@ -16,7 +16,7 @@ import org.openrdf.rio.RDFHandler;
 
 /**
  *
- * @author Alex Kreiser
+ * @author Alex Kreiser (akreiser@gmail.com)
  */
 public abstract class RDFHandlerLoader<T extends Serializable> extends ConfigurableBase<T> implements Loader {
 

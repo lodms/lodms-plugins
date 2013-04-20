@@ -11,7 +11,7 @@ import org.openrdf.model.URI;
 
 /**
  *
- * @author Alex Kreiser
+ * @author Alex Kreiser (akreiser@gmail.com)
  */
 public class ResourceDeleteConfig implements Serializable {
     

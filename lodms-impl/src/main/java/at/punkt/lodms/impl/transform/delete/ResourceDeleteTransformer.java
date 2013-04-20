@@ -21,7 +21,7 @@ import org.openrdf.repository.RepositoryException;
 
 /**
  *
- * @author Alex Kreiser
+ * @author Alex Kreiser (akreiser@gmail.com)
  */
 public class ResourceDeleteTransformer extends TransformerBase<ResourceDeleteConfig> implements ConfigDialogProvider<ResourceDeleteConfig> {
 

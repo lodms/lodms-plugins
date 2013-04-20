@@ -19,7 +19,7 @@ import org.openrdf.rio.rdfxml.util.RDFXMLPrettyWriter;
 
 /**
  *
- * @author Alex Kreiser
+ * @author Alex Kreiser (akreiser@gmail.com)
  */
 public class DummyLoader implements Loader, UIComponent {
 

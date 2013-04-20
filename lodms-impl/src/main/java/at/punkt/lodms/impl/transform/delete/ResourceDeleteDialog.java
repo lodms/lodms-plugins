@@ -21,7 +21,7 @@ import org.openrdf.model.impl.ValueFactoryImpl;
 
 /**
  *
- * @author Alex Kreiser
+ * @author Alex Kreiser (akreiser@gmail.com)
  */
 public class ResourceDeleteDialog extends VerticalLayout implements ConfigDialog {
 

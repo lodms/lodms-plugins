@@ -22,7 +22,7 @@ import org.openrdf.query.parser.sparql.SPARQLParser;
 
 /**
  *
- * @author Alex Kreiser
+ * @author Alex Kreiser (akreiser@gmail.com)
  */
 public class SPARQLConfigDialog extends VerticalLayout implements ConfigDialog {
 

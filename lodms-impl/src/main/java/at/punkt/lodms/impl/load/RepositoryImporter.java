@@ -16,7 +16,7 @@ import org.openrdf.rio.RDFHandlerException;
 
 /**
  *
- * @author Alex Kreiser
+ * @author Alex Kreiser (akreiser@gmail.com)
  */
 public abstract class RepositoryImporter<T extends Serializable> extends RDFHandlerLoader<T> {
 

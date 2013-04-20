@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Alex Kreiser
+ * @author Alex Kreiser (akreiser@gmail.com)
  */
 public class RDFFileConfig implements Serializable {
 
