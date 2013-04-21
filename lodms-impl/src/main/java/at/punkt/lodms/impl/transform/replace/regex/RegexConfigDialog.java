@@ -14,7 +14,6 @@ import com.vaadin.ui.DefaultFieldFactory;
 import com.vaadin.ui.Field;
 import com.vaadin.ui.Form;
 import com.vaadin.ui.VerticalLayout;
-import java.io.Serializable;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
@@ -86,7 +85,7 @@ public class RegexConfigDialog extends VerticalLayout implements ConfigDialog {
     }
 
     @Override
-    public Serializable getConfig() {
+    public RegexConfig getConfig() {
         configForm.commit();
         return config;
     }

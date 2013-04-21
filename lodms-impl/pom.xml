@@ -11,8 +11,9 @@
     
     <groupId>at.punkt.lodms</groupId>
     <artifactId>lodms-impl</artifactId>
-    <name>lodms-impl</name>
-    <url>http://maven.apache.org</url>
+    
+    <name>LODMS Base Plugins</name>
+    <url>https://github.com/lodms/lodms-plugins</url>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -4,13 +4,11 @@
  */
 package at.punkt.lodms.impl.transform.replace.html;
 
-import java.io.Serializable;
-
 /**
  *
  * @author kreisera
  */
-public class HtmlConfig implements Serializable {
+public class HtmlConfig {
     
     private boolean convertHtmlEntities = true;
     private boolean stripHtmlTags = true;

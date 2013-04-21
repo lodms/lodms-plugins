@@ -4,13 +4,11 @@
  */
 package at.punkt.lodms.impl.transform.replace.regex;
 
-import java.io.Serializable;
-
 /**
  *
  * @author kreisera
  */
-public class RegexConfig implements Serializable {
+public class RegexConfig {
 
     private String regex = "";
     private String replacement = "";

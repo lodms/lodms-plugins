@@ -5,7 +5,6 @@
 package at.punkt.lodms.impl.load;
 
 import at.punkt.lodms.spi.load.LoadContext;
-import java.io.Serializable;
 import org.openrdf.model.Resource;
 import org.openrdf.repository.Repository;
 import org.openrdf.repository.RepositoryConnection;
@@ -18,7 +17,7 @@ import org.openrdf.rio.RDFHandlerException;
  *
  * @author Alex Kreiser (akreiser@gmail.com)
  */
-public abstract class RepositoryImporter<T extends Serializable> extends RDFHandlerLoader<T> {
+public abstract class RepositoryImporter<T> extends RDFHandlerLoader<T> {
 
     protected Repository repository;
     protected Resource graph;

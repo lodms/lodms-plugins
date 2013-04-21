@@ -4,13 +4,11 @@
  */
 package at.punkt.lodms.impl.load.file.rdf;
 
-import java.io.Serializable;
-
 /**
  *
  * @author Alex Kreiser (akreiser@gmail.com)
  */
-public class RDFFileConfig implements Serializable {
+public class RDFFileConfig {
 
     private String filePath = "";
     private String format = "";

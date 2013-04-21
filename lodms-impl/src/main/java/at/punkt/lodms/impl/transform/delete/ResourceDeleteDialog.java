@@ -14,7 +14,6 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.Table;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
-import java.io.Serializable;
 import org.openrdf.model.URI;
 import org.openrdf.model.ValueFactory;
 import org.openrdf.model.impl.ValueFactoryImpl;
@@ -86,7 +85,7 @@ public class ResourceDeleteDialog extends VerticalLayout implements ConfigDialog
     }
     
     @Override
-    public Serializable getConfig() {
+    public ResourceDeleteConfig getConfig() {
         config.getResources().clear();
         config.getResources().addAll(resourcesToDelete.getItemIds());
         return config;

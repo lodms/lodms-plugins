@@ -21,7 +21,6 @@ import com.vaadin.ui.TextField;
 import com.vaadin.ui.Upload;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.Serializable;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Properties;
@@ -165,7 +164,7 @@ public class SimpleReplaceDialog extends GridLayout implements ConfigDialog {
     }
 
     @Override
-    public Serializable getConfig() {
+    public SimpleReplaceConfig getConfig() {
         config.setObjectType((Class)objectTypes.getValue());
         config.setReplacementType((Class)replaceTypes.getValue());
         config.getTriggerProperties().clear();

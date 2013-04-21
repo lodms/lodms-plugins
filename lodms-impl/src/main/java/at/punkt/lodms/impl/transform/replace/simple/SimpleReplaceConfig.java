@@ -4,7 +4,6 @@
  */
 package at.punkt.lodms.impl.transform.replace.simple;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -15,7 +14,7 @@ import org.openrdf.model.Value;
  *
  * @author kreisera
  */
-public class SimpleReplaceConfig implements Serializable {
+public class SimpleReplaceConfig {
 
     private List<URI> triggerProperties = new ArrayList<URI>();
     private Class<? extends Value> objectType = Value.class;

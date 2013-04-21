@@ -15,7 +15,6 @@ import com.vaadin.ui.Field;
 import com.vaadin.ui.Form;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
-import java.io.Serializable;
 import org.openrdf.model.URI;
 import org.openrdf.model.impl.URIImpl;
 import org.openrdf.rio.RDFFormat;
@@ -77,7 +76,7 @@ public class RDFFileConfigDialog extends VerticalLayout implements ConfigDialog 
     }
 
     @Override
-    public Serializable getConfig() {
+    public RDFFileConfig getConfig() {
         form.commit();
         return config;
     }

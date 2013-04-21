@@ -4,13 +4,11 @@
  */
 package at.punkt.lodms.impl.transform.sparql.update;
 
-import java.io.Serializable;
-
 /**
  *
  * @author kreisera
  */
-public class SPARQLUpdateTransformConfig implements Serializable {
+public class SPARQLUpdateTransformConfig {
 
     private String query = "";
 

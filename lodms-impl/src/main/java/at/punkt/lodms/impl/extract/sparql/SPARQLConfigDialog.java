@@ -16,7 +16,6 @@ import com.vaadin.ui.FormFieldFactory;
 import com.vaadin.ui.TextArea;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
-import java.io.Serializable;
 import java.net.URL;
 import org.openrdf.query.parser.sparql.SPARQLParser;
 
@@ -84,7 +83,7 @@ public class SPARQLConfigDialog extends VerticalLayout implements ConfigDialog {
     }
 
     @Override
-    public Serializable getConfig() {
+    public SPARQLConfig getConfig() {
         form.commit();
         return beanItem.getBean();
     }

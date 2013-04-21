@@ -4,7 +4,6 @@
  */
 package at.punkt.lodms.impl.transform.delete;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import org.openrdf.model.URI;
@@ -13,7 +12,7 @@ import org.openrdf.model.URI;
  *
  * @author Alex Kreiser (akreiser@gmail.com)
  */
-public class ResourceDeleteConfig implements Serializable {
+public class ResourceDeleteConfig {
     
     private List<URI> resources = new ArrayList<URI>();
 

@@ -8,7 +8,6 @@ import at.punkt.lodms.integration.ConfigurableBase;
 import at.punkt.lodms.spi.load.LoadContext;
 import at.punkt.lodms.spi.load.LoadException;
 import at.punkt.lodms.spi.load.Loader;
-import java.io.Serializable;
 import org.openrdf.model.URI;
 import org.openrdf.repository.Repository;
 import org.openrdf.repository.RepositoryConnection;
@@ -18,7 +17,7 @@ import org.openrdf.rio.RDFHandler;
  *
  * @author Alex Kreiser (akreiser@gmail.com)
  */
-public abstract class RDFHandlerLoader<T extends Serializable> extends ConfigurableBase<T> implements Loader {
+public abstract class RDFHandlerLoader<T> extends ConfigurableBase<T> implements Loader {
 
     @Override
     public void load(Repository repository, URI graph, LoadContext context) throws LoadException {

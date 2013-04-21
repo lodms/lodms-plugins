@@ -14,9 +14,6 @@ import com.vaadin.ui.Form;
 import com.vaadin.ui.FormFieldFactory;
 import com.vaadin.ui.TextArea;
 import com.vaadin.ui.VerticalLayout;
-import java.io.Serializable;
-import org.openrdf.query.MalformedQueryException;
-import org.openrdf.query.parser.ParsedQuery;
 import org.openrdf.query.parser.ParsedUpdate;
 import org.openrdf.query.parser.sparql.SPARQLParser;
 
@@ -65,7 +62,7 @@ public class SPARQLUpdateTransformDialog extends VerticalLayout implements Confi
     }
 
     @Override
-    public Serializable getConfig() {
+    public SPARQLUpdateTransformConfig getConfig() {
         queryForm.commit();
         return config;
     }

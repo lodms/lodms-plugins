@@ -4,13 +4,11 @@
  */
 package at.punkt.lodms.impl.extract.sparql;
 
-import java.io.Serializable;
-
 /**
  *
  * @author Alex Kreiser (akreiser@gmail.com)
  */
-public class SPARQLConfig implements Serializable {
+public class SPARQLConfig {
     
     private String endpoint = "";
     private String query = "";
