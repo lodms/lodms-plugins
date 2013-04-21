@@ -4,14 +4,13 @@
  */
 package at.punkt.lodms.ext.any23.html;
 
-import java.io.Serializable;
 import java.util.Collection;
 
 /**
  *
  * @author Alex Kreiser
  */
-public class Any23Config implements Serializable {
+public class Any23Config {
     
     private Collection<Any23Document> documents;
 

@@ -14,7 +14,6 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.Table;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
-import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -76,7 +75,7 @@ public class Any23Dialog extends VerticalLayout implements ConfigDialog {
     }
 
     @Override
-    public Serializable getConfig() {
+    public Any23Config getConfig() {
         config.setDocuments(new ArrayList(container.getItemIds()));
         return config;
     }

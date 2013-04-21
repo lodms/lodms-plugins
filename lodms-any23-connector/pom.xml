@@ -9,8 +9,10 @@
     </parent>
     <groupId>at.punkt.lodms</groupId>
     <artifactId>lodms-any23-connector</artifactId>
-    <name>lodms-any23-connector</name>
-    <url>http://maven.apache.org</url>
+    
+    <name>LODMS Any23 Connector</name>
+    <url>https://github.com/lodms/lodms-plugins</url>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

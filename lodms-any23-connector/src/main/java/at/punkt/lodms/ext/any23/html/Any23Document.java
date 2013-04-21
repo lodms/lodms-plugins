@@ -4,13 +4,11 @@
  */
 package at.punkt.lodms.ext.any23.html;
 
-import java.io.Serializable;
-
 /**
  *
  * @author Alex Kreiser
  */
-public class Any23Document implements Serializable {
+public class Any23Document {
     
     private String url;
 

@@ -4,13 +4,11 @@
  */
 package at.punkt.lodms.ext.any23.csv;
 
-import java.io.Serializable;
-
 /**
  *
  * @author Alex Kreiser
  */
-public class CsvExtractorConfig implements Serializable {
+public class CsvExtractorConfig {
     
     private String filePath = "";
     private String baseUri = "http://example.com/csv/";
