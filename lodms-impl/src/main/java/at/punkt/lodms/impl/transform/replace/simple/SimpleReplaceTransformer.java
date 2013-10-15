@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package at.punkt.lodms.impl.transform.replace.simple;
 
 import at.punkt.lodms.base.TransformerBase;
@@ -14,6 +10,8 @@ import com.vaadin.Application;
 import com.vaadin.terminal.ClassResource;
 import com.vaadin.terminal.Resource;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 import org.openrdf.model.Literal;
 import org.openrdf.model.Statement;
 import org.openrdf.model.URI;
@@ -23,6 +21,7 @@ import org.openrdf.model.impl.ValueFactoryImpl;
 import org.openrdf.repository.Repository;
 import org.openrdf.repository.RepositoryConnection;
 import org.openrdf.repository.RepositoryException;
+import org.openrdf.repository.RepositoryResult;
 
 /**
  *
@@ -40,18 +39,25 @@ public class SimpleReplaceTransformer extends TransformerBase<SimpleReplaceConfi
     public void transform(Repository repository, URI graph, TransformContext context) throws TransformException {
         try {
             RepositoryConnection con = repository.getConnection();
+            Set<Statement> toRemove = new HashSet<Statement>();
+            Set<Statement> toAdd = new HashSet<Statement>();
             try {
                 ArrayList<Statement> replaceStmts = new ArrayList<Statement>();
                 for (URI triggerProp : config.getTriggerProperties()) {
                     replaceStmts.clear();
-                    con.getStatements(null, triggerProp, null, true, graph).addTo(replaceStmts);
+                    RepositoryResult<Statement> result = con.getStatements(null, triggerProp, null, true, graph);
+                    result.addTo(replaceStmts);
+                    result.close();
                     for (Statement replace : replaceStmts) {
                         if (config.getObjectType().isAssignableFrom(replace.getObject().getClass())) {
-                            con.remove(replace, graph);
-                            con.add(replace.getSubject(), replace.getPredicate(), transformValue(replace.getObject()), graph);
+                            toRemove.add(replace);
+                            toAdd.add(factory.createStatement(replace.getSubject(), replace.getPredicate(), transformValue(replace.getObject())));
                         }
                     }
                 }
+                con.remove(toRemove, graph);
+                con.add(toAdd, graph);
+                con.commit();
             } finally {
                 con.close();
             }
