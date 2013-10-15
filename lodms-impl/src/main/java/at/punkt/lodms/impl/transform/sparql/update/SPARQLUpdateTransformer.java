@@ -14,7 +14,10 @@ import com.vaadin.Application;
 import com.vaadin.terminal.ClassResource;
 import com.vaadin.terminal.Resource;
 import org.openrdf.model.URI;
+import org.openrdf.query.Dataset;
 import org.openrdf.query.QueryLanguage;
+import org.openrdf.query.Update;
+import org.openrdf.query.impl.DatasetImpl;
 import org.openrdf.repository.Repository;
 import org.openrdf.repository.RepositoryConnection;
 
@@ -35,7 +38,11 @@ public class SPARQLUpdateTransformer extends TransformerBase<SPARQLUpdateTransfo
             RepositoryConnection con = repository.getConnection();
             try {
                 con.setAutoCommit(false);
-                con.prepareUpdate(QueryLanguage.SPARQL, config.getQuery()).execute();
+                Update update = con.prepareUpdate(QueryLanguage.SPARQL, config.getQuery());
+                DatasetImpl dataset = new DatasetImpl();
+                dataset.setDefaultInsertGraph(graph);
+                update.setDataset(dataset);
+                update.execute();
                 con.commit();
             } finally {
                 con.close();
