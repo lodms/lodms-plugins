@@ -1,0 +1,29 @@
+package at.punkt.alchemist.poolparty.extract;
+
+import at.punkt.alchemist.poolparty.PoolPartyApiConfig;
+
+/**
+ *
+ * @author kreisera
+ */
+public class ThesaurusLinkConfig {
+
+    private PoolPartyApiConfig apiConfig;
+    private String linkProperty = "http://www.w3.org/2004/02/skos/core#exactMatch";
+
+    public PoolPartyApiConfig getApiConfig() {
+        return apiConfig;
+    }
+
+    public void setApiConfig(PoolPartyApiConfig apiConfig) {
+        this.apiConfig = apiConfig;
+    }
+
+    public String getLinkProperty() {
+        return linkProperty;
+    }
+
+    public void setLinkProperty(String linkProperty) {
+        this.linkProperty = linkProperty;
+    }
+}
