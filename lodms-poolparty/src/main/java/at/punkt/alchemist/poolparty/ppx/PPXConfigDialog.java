@@ -4,8 +4,6 @@
  */
 package at.punkt.alchemist.poolparty.ppx;
 
-import at.punkt.lodms.impl.transform.ppx.PPXConfig;
-import at.punkt.lodms.impl.transform.replace.regex.ValueType;
 import at.punkt.lodms.integration.ConfigDialog;
 import com.vaadin.data.Item;
 import com.vaadin.data.util.BeanItem;
