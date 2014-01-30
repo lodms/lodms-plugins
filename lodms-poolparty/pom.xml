@@ -1,68 +1,78 @@
 <?xml version="1.0"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <artifactId>lodms</artifactId>
-        <groupId>at.punkt.lodms</groupId>
-        <version>1.0.0</version>
-    </parent>
-
-    <repositories>
-        <repository>
-            <id>punkt</id>
-            <name>SWC Repository</name>
-            <url>https://mvn.semantic-web.at</url>
-            <snapshots>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
-
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>lodms</artifactId>
     <groupId>at.punkt.lodms</groupId>
-    <artifactId>lodms-poolparty</artifactId>
+    <version>1.0.0</version>
+  </parent>
 
-    <name>LODMS PoolParty Modules</name>
-    <url>http://maven.apache.org</url>
+  <repositories>
+    <repository>
+      <id>punkt</id>
+      <name>SWC Repository</name>
+      <url>https://mvn.semantic-web.at</url>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+  </repositories>
 
-    <properties>
-<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.7.5</version>
-        </dependency>
+  <groupId>at.punkt.lodms</groupId>
+  <artifactId>lodms-poolparty</artifactId>
 
-        <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin</artifactId>
-            <version>6.8.3</version>
-        </dependency>
-        <dependency>
-            <groupId>at.punkt.lodms</groupId>
-<artifactId>lodms-web-integration</artifactId>
-            <version>1.0.0</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>at.punkt.lodms</groupId>
-            <artifactId>lodms-impl</artifactId>
-            <version>1.0.0</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>at.punkt.commons</groupId>
-<artifactId>punkt-commons-vocabulary</artifactId>
-            <version>1.2.1</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-<groupId>at.punkt.poolparty.extractor</groupId>
-<artifactId>poolparty-extractor-client</artifactId>
-            <version>4.1.0-SNAPSHOT</version>
-            <type>jar</type>
-        </dependency>
-    </dependencies>
+  <name>LODMS PoolParty Modules</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+      <version>1.7.5</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.vaadin</groupId>
+      <artifactId>vaadin</artifactId>
+      <version>6.8.3</version>
+    </dependency>
+    <dependency>
+      <groupId>at.punkt.lodms</groupId>
+      <artifactId>lodms-web-integration</artifactId>
+      <version>1.0.0</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>at.punkt.lodms</groupId>
+      <artifactId>lodms-impl</artifactId>
+      <version>1.0.0</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>at.punkt.commons</groupId>
+      <artifactId>punkt-commons-vocabulary</artifactId>
+      <version>1.2.1</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>at.punkt.poolparty.extractor</groupId>
+      <artifactId>poolparty-extractor-client</artifactId>
+      <version>4.1.0-SNAPSHOT</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>at.punkt.poolparty.extractor</groupId>
+      <artifactId>poolparty-extractor-web-api</artifactId>
+      <version>4.1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>at.punkt.commons</groupId>
+      <artifactId>punkt-commons-ws-anno</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+  </dependencies>
 </project>
